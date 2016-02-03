@@ -11,9 +11,9 @@ exports.get = function(req, res, next){
 
 exports.post = function(req, res, next){
   Event.create(req.body)
-    .then(event){
+    .then(function(event){
       res.json(event);
-    }
+    });
 };
 
 exports.getEvent = function(req, res, next){

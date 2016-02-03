@@ -12,12 +12,12 @@ var supplySchema = new Schema({
   eventId: {
     type: Schema.Types.ObjectId,
     ref: 'event'
-  }
+  },
   owner: {
     type: Schema.Types.ObjectId,
     ref: 'user'
   }
-})
+});
 
-module.exports = mongoose.Model('supply', supplySchema);
+module.exports = mongoose.model('supply', supplySchema);
 

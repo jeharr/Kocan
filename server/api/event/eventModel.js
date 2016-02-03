@@ -14,7 +14,7 @@ var eventSchema = new Schema({
   }],
   messages: [{
     type: String,
-  }]
+  }],
   owner: {
     type: Schema.Types.ObjectId,
     ref: 'user'
@@ -24,6 +24,6 @@ var eventSchema = new Schema({
     ref: 'supply'
   }]
 
-})
+});
 
 module.exports = mongoose.model('event', eventSchema);
