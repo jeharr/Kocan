@@ -1,3 +1,6 @@
+var Event = require('./eventModel');
+
+
 exports.params = function(req, res, next, id){
   res.json('test event params')
 };
@@ -7,7 +10,10 @@ exports.get = function(req, res, next){
 };
 
 exports.post = function(req, res, next){
-  res.json('test event post')
+  Event.create(req.body)
+    .then(event){
+      res.json(event);
+    }
 };
 
 exports.getEvent = function(req, res, next){

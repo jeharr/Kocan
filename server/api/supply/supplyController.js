@@ -1,3 +1,6 @@
+var Supply = require('./supplyModel');
+
+
 exports.params = function(req, res, next, id){
   res.json('test supply params')
 };

@@ -1,3 +1,6 @@
+var User = require('./userModel');
+
+
 exports.params = function(req, res, next, id){
   res.json('test user params')
 };
